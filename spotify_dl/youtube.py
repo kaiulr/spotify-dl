@@ -21,7 +21,7 @@ def download_songs(songs, download_directory, format_string, skip_mp3, keep_play
     """
     log.debug(f"Downloading to {download_directory}")
     for song in songs:
-        query = f"{song.get('artist')} - {song.get('name')} Provided to youtube by".replace(":", "").replace("\"", "")
+        query = f"{song.get('artist')} - {song.get('name')} Provided to youtube by released on".replace(":", "").replace("\"", "")
         download_archive = path.join(download_directory, 'downloaded_songs.txt')
 
         file_name = sanitize(f"{song.get('artist')} - {song.get('name')}")  # youtube-dl automatically replaces with #
