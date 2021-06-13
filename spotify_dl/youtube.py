@@ -12,8 +12,7 @@ from spotify_dl.utils import sanitize
 
 
 def default_filename(song):
-    return sanitize(f"{song.get('artist')} - {song.get('name')}", '#')  # youtube-dl automatically replaces with #
-
+    return sanitizesanitize(f"{song.get('artist')} - {song.get('name')}")  # youtube-dl automatically replaces with # 
 
 def playlist_num_filename(song):
     return f"{song.get('playlist_num')} - {default_filename(song)}"
